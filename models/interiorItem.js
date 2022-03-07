@@ -5,7 +5,7 @@ const interiorItemSchema = new mongoose.Schema({
   imageUrl:	String,
   name:	String,
   category:	String,
-  itemSeries:	Type,
+  itemSeries:	String,
   itemSet:	String,
   themes:	[{type: String}],
   hhaCategory:	String,
