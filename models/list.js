@@ -1,16 +1,6 @@
 import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
-import { InteriorItem } from './interiorItem.js'
-import { Furniture } from './furniture.js'
-import { Fossil } from './fossil.js'
-import { Fish } from './fish.js'
-import { Villager } from './villager.js'
-import { Clothing } from './clothing.js'
-import { Artwork } from './artwork.js'
-import { SeaCreature } from './seaCreature.js'
-import { Bug } from './bug.js'
-
 const listSchema = new mongoose.Schema({
   listName: String,
   interiorItem: [{ type: Schema.Types.ObjectId, ref: 'InteriorItem' }],
