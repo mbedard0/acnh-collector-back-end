@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 const listSchema = new mongoose.Schema({
   listName: String,
   description: String,
+  creator: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
   interiorItem: [{ type: Schema.Types.ObjectId, ref: 'InteriorItem' }],
   furniture: [{ type: Schema.Types.ObjectId, ref: 'Furniture' }],
   fossil: [{ type: Schema.Types.ObjectId, ref: 'Fossil' }],
