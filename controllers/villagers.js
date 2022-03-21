@@ -16,7 +16,6 @@ function index(req, res) {
     }
   })
   .then(response => {
-    console.log(response.data)
     res.json(response.data)
   })
   .catch(e => console.log(e))

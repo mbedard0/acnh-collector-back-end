@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const listSchema = new mongoose.Schema({
   listName: String,
+  description: String,
   interiorItem: [{ type: Schema.Types.ObjectId, ref: 'InteriorItem' }],
   furniture: [{ type: Schema.Types.ObjectId, ref: 'Furniture' }],
   fossil: [{ type: Schema.Types.ObjectId, ref: 'Fossil' }],
@@ -15,7 +16,8 @@ const listSchema = new mongoose.Schema({
 }
   , {
     timestamps: true,
-  })
+  }
+)
 
 const List = mongoose.model('List', listSchema)
 
