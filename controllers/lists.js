@@ -9,11 +9,20 @@ async function create(req, res) {
     await profile.lists.push(newList._id)
     await profile.save()
     res.json(newList)
-  } catch(e) {
+  } catch (e) {
     console.log(e)
   }
 }
 
-export { 
-  create, 
+function index(req, res) {
+  Profile.findById(req.params.id)
+    .populate('lists')
+    .then(profileInfo => {
+      res.json(profileInfo.lists)
+    })
+}
+
+export {
+  create,
+  index
 }

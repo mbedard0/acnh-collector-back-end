@@ -4,6 +4,6 @@ import { checkAuth } from '../middleware/auth.js'
 const router = Router()
 
 router.post('/', listsCtrl.create)
-
+router.get('/:id', listsCtrl.index)
 
 export { router }
