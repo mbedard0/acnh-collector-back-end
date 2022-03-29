@@ -14,6 +14,7 @@ function getProfile(req, res) {
   User.findById(req.params.id)
     .then(user => {
       Profile.findById(user.profile)
+        .populate('lists')
         .then(profile => {
           res.json(profile)
         })
