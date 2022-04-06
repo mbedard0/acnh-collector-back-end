@@ -3,6 +3,7 @@ import * as creaturesCtrl from '../controllers/creatures.js'
 const router = Router()
 
 
-router.get('/', creaturesCtrl.indexFish)
+router.get('/fish', creaturesCtrl.indexFish)
+router.get('/bugs', creaturesCtrl.indexBugs)
 
 export { router }
