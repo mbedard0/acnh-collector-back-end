@@ -5,5 +5,6 @@ const router = Router()
 
 router.get('/fish', creaturesCtrl.indexFish)
 router.get('/bugs', creaturesCtrl.indexBugs)
+router.get('/sea', creaturesCtrl.indexSea)
 
 export { router }
