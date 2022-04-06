@@ -1,6 +1,3 @@
-import { Villager } from '../models/villager.js'
-import { Profile } from '../models/profile.js'
-import { List } from '../models/list.js'
 import axios from 'axios'
 
 function index(req, res) {

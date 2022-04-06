@@ -7,6 +7,7 @@ import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as villagersRouter } from './routes/villagers.js'
 import { router as listsRouter } from './routes/lists.js'
+import { router as creaturesRouter } from './routes/creatures.js'
 
 import('./config/database.js')
 
@@ -19,6 +20,7 @@ app.use(express.json())
 app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/villagers', villagersRouter)
+app.use('/api/creatures', creaturesRouter)
 app.use('/api/lists', listsRouter)
 
 app.use(function (req, res, next) {
