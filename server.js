@@ -10,6 +10,7 @@ import { router as listsRouter } from './routes/lists.js'
 import { router as creaturesRouter } from './routes/creatures.js'
 import { router as artifactsRouter } from './routes/artifacts.js'
 import { router as clothingRouter } from './routes/clothing.js'
+import { router as furnitureRouter } from './routes/furniture.js'
 import('./config/database.js')
 
 const app = express()
@@ -24,6 +25,7 @@ app.use('/api/villagers', villagersRouter)
 app.use('/api/creatures', creaturesRouter)
 app.use('/api/artifacts', artifactsRouter)
 app.use('/api/clothing', clothingRouter)
+app.use('/api/furniture', furnitureRouter)
 app.use('/api/lists', listsRouter)
 
 app.use(function (req, res, next) {
