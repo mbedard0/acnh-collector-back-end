@@ -4,5 +4,6 @@ const router = Router()
 
 
 router.get('/fossils', artifactsCtrl.indexFossils)
+router.get('/art', artifactsCtrl.indexArt)
 
 export { router }
